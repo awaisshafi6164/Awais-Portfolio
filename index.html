@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPortfolio | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen relative">
+    <div class="custom-cursor">
+        <div class="cursor-circle"></div>
+    </div>
+    <div id="particles-js"></div>
+    
+    <!-- Navigation -->
+    <nav class="glass-card fixed w-full z-50 top-0 left-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold solid-text">DevPortfolio</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#skills" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#projects" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md focus:outline-none">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center">
+                <div class="floating mb-8 profile-pic">
+                    <div class="w-40 h-40 mx-auto rounded-full glass-card border-2 border-opacity-20 border-purple-500 flex items-center justify-center">
+                        <img src="media\awais_home.jpg" alt="Profile" class="w-36 h-36 rounded-full object-cover">
+                    </div>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="solid-text">M Awais Shafi</span></h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6">Associate Software Engineer at <span class="text-red-400">Elixir Technologies</span></h2>
+                
+                <p class="text-lg md:text-xl max-w-2xl mx-auto glass-card p-6 rounded-lg mb-8 font-mono text-left">
+                    <span class="opacity-40">
+                        <span class="opacity-40">void</span> <span class="text-purple-400">introduce</span>
+                        <span>
+                            <span class="text-cyan-400">(</span><span class="text-yellow-200">string</span> <span
+                                class="text-blue-400">passion</span><span class="text-cyan-400">)</span> <span
+                                class="text-pink-400">&#123;</span>
+                        </span>
+                        <br>
+                        &nbsp;&nbsp;<span class="opacity-40">if</span> <span class="text-cyan-400">(</span><span
+                            class="text-blue-400">passion</span> == "tech"<span class="text-cyan-400">) &#123;</span><br>
+                    </span>
+                    <span class="block pl-12">
+                        <span class="text-blue-400">cout</span><span class="text-pink-400">&lt;&lt;</span>"I'm a backend engineer at
+                        <span class="text-red-400">Elixir Technologies</span>, focused on building reliable, scalable systems. I
+                        specialize in <span class="text-blue-400">C++</span>, <span class="text-blue-400">Python</span>, and <span
+                            class="text-blue-400">Linux</span>, and contributed to porting a legacy Windows project to Linux, fixing
+                        critical memory issues. On the side, I build mobile apps with <span class="text-yellow-400">Flutter</span> and
+                        love open source. My mission is to grow with high-tech teams and build apps that make an impact."<span
+                            class="text-pink-400">;</span>
+                    </span>
+                    <span class="opacity-40">
+                        &nbsp;&nbsp;<span class="text-cyan-400">&#125;</span> <span class="opacity-40">else</span> <span
+                            class="text-cyan-400">&#123;</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue-400">cout</span><span class="text-pink-400">&lt;&lt;</span>"Keep
+                        exploring."<span class="text-pink-400">;</span><br>
+                        &nbsp;&nbsp;<span class="text-cyan-400">&#125;</span><br>
+                        <span class="text-pink-400">&#125;</span>
+                    </span>
+                </p>
+                  
+                
+                
+                
+                <div class="flex justify-center space-x-4">
+                    <a href="#contact" class="px-6 py-3 rounded-full btn-primary font-medium">
+                        Get In Touch
+                    </a>
+                    <a href="#projects" class="px-6 py-3 rounded-full btn-secondary font-medium">
+                        View My Work
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-2xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 solid-text">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 glass-card p-8 rounded-xl" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="1000">
+                    <div class="floating">
+                        <img src="media\awais_about.jpeg" alt="About Me" class="w-full rounded-lg shadow-xl">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
+                    <p class="text-lg mb-6 opacity-90">
+                        I'm a passionate backend software engineer with a strong foundation in C/C++, Python, and Linux-based development.
+                        Currently working as an Associate Software Developer at Elixir Technologies, I’ve contributed to critical projects
+                        including
+                        porting Windows-based applications to Linux, resolving complex memory issues, and enhancing system stability.
+                        I'm also the creator of "Everyday Chronicles", a Flutter-based Android app developed as my final year project.
+                        My mission is to build impactful mobile applications, engage in open source, and collaborate with high-tech innovators
+                        around the globe.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="glass-card p-4 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="p-2 rounded-full bg-purple-500 bg-opacity-20 mr-3">
+                                    <i class="fas fa-code text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Experience</h4>
+                                    <p class="text-sm opacity-80">1+ Year</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass-card p-4 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="p-2 rounded-full bg-blue-500 bg-opacity-20 mr-3">
+                                    <i class="fas fa-project-diagram text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Projects</h4>
+                                    <p class="text-sm opacity-80">5+ Completed</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass-card p-4 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="p-2 rounded-full bg-green-500 bg-opacity-20 mr-3">
+                                    <i class="fas fa-users text-green-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Clients</h4>
+                                    <p class="text-sm opacity-80">2+ Worldwide</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass-card p-4 rounded-lg">
+                            <div class="flex items-center">
+                                <div class="p-2 rounded-full bg-yellow-500 bg-opacity-20 mr-3">
+                                    <i class="fas fa-award text-yellow-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Achievements</h4>
+                                    <p class="text-sm opacity-80">10+ Awards</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="media\awais_resume.pdf" class="inline-flex items-center px-6 py-3 rounded-full btn-secondary font-medium">
+                        <i class="fas fa-download mr-2"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 solid-text">My Skills</h2>
+            <div class="glass-card p-8 rounded-xl mb-12">
+                <h3 class="text-2xl font-semibold mb-6">Technologies I Work With</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <div class="tech-icon flex flex-col items-center glass-card p-4 rounded-lg">
+                        <i class="fab fa-js text-yellow-400 text-4xl mb-2"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-icon flex flex-col items-center glass-card p-4 rounded-lg">
+                        <i class="fab fa-react text-blue-400 text-4xl mb-2"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="tech-icon flex flex-col items-center glass-card p-4 rounded-lg">
+                        <i class="fab fa-node-js text-green-500 text-4xl mb-2"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-icon flex flex-col items-center glass-card p-4 rounded-lg">
+                        <i class="fab fa-python text-blue-600 text-4xl mb-2"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-icon flex flex-col items-center glass-card p-4 rounded-lg">
+                        <i class="fab fa-cuttlefish text-teal-400 text-4xl mb-2"></i>
+                        <span>C++</span>
+                    </div>
+                    <div class="tech-icon flex flex-col items-center glass-card p-4 rounded-lg">
+                        <i class="fab fa-aws text-orange-400 text-4xl mb-2"></i>
+                        <span>AWS</span>
+                    </div>
+                    <div class="tech-icon flex flex-col items-center glass-card p-4 rounded-lg">
+                        <i class="fab fa-docker text-blue-300 text-4xl mb-2"></i>
+                        <span>Docker</span>
+                    </div>
+                    <div class="tech-icon flex flex-col items-center glass-card p-4 rounded-lg">
+                        <i class="fab fa-git-alt text-orange-500 text-4xl mb-2"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="tech-icon flex flex-col items-center glass-card p-4 rounded-lg">
+                        <i class="fab fa-html5 text-orange-600 text-4xl mb-2"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-icon flex flex-col items-center glass-card p-4 rounded-lg">
+                        <i class="fab fa-css3-alt text-blue-500 text-4xl mb-2"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-icon flex flex-col items-center glass-card p-4 rounded-lg">
+                        <i class="fab fa-linux text-gray-300 text-4xl mb-2"></i>
+                        <span>Linux</span>
+                    </div>
+                    <div class="tech-icon flex flex-col items-center glass-card p-4 rounded-lg">
+                        <i class="fas fa-server text-green-400 text-4xl mb-2"></i>
+                        <span>DevOps</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-card p-8 rounded-xl" data-tilt>
+                    <h3 class="text-2xl font-semibold mb-4">Coding Skills</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>JavaScript/TypeScript</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 bg-opacity-50 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>React/Next.js</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 bg-opacity-50 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Node.js/Express</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 bg-opacity-50 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Python/Django</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 bg-opacity-50 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8 rounded-xl" data-tilt>
+                    <h3 class="text-2xl font-semibold mb-4">Other Skills</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Cloud Architecture</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 bg-opacity-50 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Database Design</span>
+                                <span>82%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 bg-opacity-50 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>DevOps & CI/CD</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 bg-opacity-50 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>UI/UX Design</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 bg-opacity-50 rounded-full h-2">
+                                <div class="bg-purple-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 solid-text">My Projects</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-card-inner h-full">
+                        <div class="project-card-front glass-card p-6 rounded-xl h-full">
+                            <div class="mb-4 overflow-hidden rounded-lg">
+                                <img src="media\pos_hotel_project.png" alt="Project 1" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Hotel POS System</h3>
+                            <p class="text-sm opacity-90 mb-4">POS System for Hotel Blue Sky integerated with PRA.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs px-2 py-1 rounded-full bg-purple-500 bg-opacity-20">C++</span>
+                                <!-- <span class="text-xs px-2 py-1 rounded-full bg-blue-500 bg-opacity-20">Node.js</span> -->
+                                <span class="text-xs px-2 py-1 rounded-full bg-green-500 bg-opacity-20">MySQL</span>
+                            </div>
+                        </div>
+                        <div class="project-card-back glass-card p-6 rounded-xl h-full flex flex-col justify-center items-center text-center absolute top-0 w-full">
+                            <h3 class="text-xl font-semibold mb-4">Project Details</h3>
+                            <p class="text-sm mb-4">POS Desktop System for Hotel Blue Sky (Rawalpindi, Pakistan) integerated with PRA (Punjab Revenue Authority) Govt Tax System. Built with C++ and MySQL</p>
+                            <div class="flex space-x-3">
+                                <a href="#" class="px-3 py-1 rounded-full btn-primary text-sm">Live Demo</a>
+                                <a href="https://github.com/awaisshafi6164/HotelManagementSystem" class="px-3 py-1 rounded-full btn-secondary text-sm">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-card-inner h-full">
+                        <div class="project-card-front glass-card p-6 rounded-xl h-full">
+                            <div class="mb-4 overflow-hidden rounded-lg">
+                                <img src="media\pos_restaurent_project.png" alt="Project 2" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Restaurent POS System</h3>
+                            <p class="text-sm opacity-90 mb-4">POS System for Larosh Restaurent integerated with PRA.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs px-2 py-1 rounded-full bg-purple-500 bg-opacity-20">C++</span>
+                                <span class="text-xs px-2 py-1 rounded-full bg-green-500 bg-opacity-20">MySQL</span>
+                                <!-- <span class="text-xs px-2 py-1 rounded-full bg-yellow-500 bg-opacity-20">Python</span> -->
+                                <!-- <span class="text-xs px-2 py-1 rounded-full bg-blue-500 bg-opacity-20">Flask</span> -->
+                                <!-- <span class="text-xs px-2 py-1 rounded-full bg-green-500 bg-opacity-20">OpenAI API</span> -->
+                            </div>
+                        </div>
+                        <div class="project-card-back glass-card p-6 rounded-xl h-full flex flex-col justify-center items-center text-center absolute top-0 w-full">
+                            <h3 class="text-xl font-semibold mb-4">Project Details</h3>
+                            <p class="text-sm mb-4">POS Desktop System for Larosh Restaurent (Rawalpindi, Pakistan) integerated with PRA (Punjab Revenue Authority) Govt Tax
+                            System. Built with C++ and MySQL</p>
+                            <div class="flex space-x-3">
+                                <a href="#" class="px-3 py-1 rounded-full btn-primary text-sm">Live Demo</a>
+                                <a href="https://github.com/awaisshafi6164/RestaurantManagementSystem" class="px-3 py-1 rounded-full btn-secondary text-sm">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-card-inner h-full">
+                        <div class="project-card-front glass-card p-6 rounded-xl h-full">
+                            <div class="mb-4 overflow-hidden rounded-lg">
+                                <img src="media\font_extractor_utility.png" alt="Project 3" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Font Extractor Utility</h3>
+                            <p class="text-sm opacity-90 mb-4">Created a font extracted utility for my company project.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs px-2 py-1 rounded-full bg-yellow-500 bg-opacity-20">Python</span>
+                                <span class="text-xs px-2 py-1 rounded-full bg-blue-500 bg-opacity-20">Streamlit</span>
+                                <!-- <span class="text-xs px-2 py-1 rounded-full bg-green-500 bg-opacity-20">GraphQL</span> -->
+                                <!-- <span class="text-xs px-2 py-1 rounded-full bg-red-500 bg-opacity-20">Firebase</span> -->
+                            </div>
+                        </div>
+                        <div class="project-card-back glass-card p-6 rounded-xl h-full flex flex-col justify-center items-center text-center absolute top-0 w-full">
+                            <h3 class="text-xl font-semibold mb-4">Project Details</h3>
+                            <p class="text-sm mb-4">Created a font extractor tillity using python and streamlit to extract fonts from docx, rtf, and multiple xml files.</p>
+                            <div class="flex space-x-3">
+                                <a href="#" class="px-3 py-1 rounded-full btn-primary text-sm">Live Demo</a>
+                                <a href="#" class="px-3 py-1 rounded-full btn-secondary text-sm">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-card-inner h-full">
+                        <div class="project-card-front glass-card p-6 rounded-xl h-full">
+                            <div class="mb-4 overflow-hidden rounded-lg">
+                                <img src="media\shopsync_android_project.png" alt="Project 4" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">ShopSync Mobile Application</h3>
+                            <p class="text-sm opacity-90 mb-4">A mobile app for a Whole sale traders where they can manager their Products efficently.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs px-2 py-1 rounded-full bg-blue-500 bg-opacity-20">Flutter</span>
+                                <span class="text-xs px-2 py-1 rounded-full bg-purple-500 bg-opacity-20">Dart</span>
+                                <span class="text-xs px-2 py-1 rounded-full bg-green-500 bg-opacity-20">Firebase</span>
+                                <span class="text-xs px-2 py-1 rounded-full bg-yellow-500 bg-opacity-20">MySQL</span>
+                            </div>
+                        </div>
+                        <div class="project-card-back glass-card p-6 rounded-xl h-full flex flex-col justify-center items-center text-center absolute top-0 w-full">
+                            <h3 class="text-xl font-semibold mb-4">Project Details</h3>
+                            <p class="text-sm mb-4">A mobile app for a Whole sale traders where they can manager their Products efficently. 
+                                Also they can be able to register there shop in app as well there eomployee with different permissions as well.</p>
+                            <div class="flex space-x-3">
+                                <a href="#" class="px-3 py-1 rounded-full btn-primary text-sm">Live Demo</a>
+                                <a href="https://github.com/awaisshafi6164/shopsync" class="px-3 py-1 rounded-full btn-secondary text-sm">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-card-inner h-full">
+                        <div class="project-card-front glass-card p-6 rounded-xl h-full">
+                            <div class="mb-4 overflow-hidden rounded-lg">
+                                <img src="https://via.placeholder.com/600x400" alt="Project 5" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Everyday Chronicles FYP</h3>
+                            <p class="text-sm opacity-90 mb-4">Everyday Chronicles is an android application that is fully an automated diary</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs px-2 py-1 rounded-full bg-blue-500 bg-opacity-20">Flutter</span>
+                                <span class="text-xs px-2 py-1 rounded-full bg-purple-500 bg-opacity-20">Dart</span>
+                                <span class="text-xs px-2 py-1 rounded-full bg-green-500 bg-opacity-20">Firebase</span>
+                                <span class="text-xs px-2 py-1 rounded-full bg-yellow-500 bg-opacity-20">MySQL</span>
+                            </div>
+                        </div>
+                        <div class="project-card-back glass-card p-6 rounded-xl h-full flex flex-col justify-center items-center text-center absolute top-0 w-full">
+                            <h3 class="text-xl font-semibold mb-4">Project Details</h3>
+                            <p class="text-sm mb-4">Everyday Chronicles is an android application that is fully an automated diary which record daily location of user, their call reciving location, prayer record, mobile usage, etc</p>
+                            <div class="flex space-x-3">
+                                <a href="#" class="px-3 py-1 rounded-full btn-primary text-sm">Live Demo</a>
+                                <a href="https://github.com/awaisshafi6164/Everyday-Chronicles-FYP" class="px-3 py-1 rounded-full btn-secondary text-sm">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <!-- <div class="project-card">
+                    <div class="project-card-inner h-full">
+                        <div class="project-card-front glass-card p-6 rounded-xl h-full">
+                            <div class="mb-4 overflow-hidden rounded-lg">
+                                <img src="https://via.placeholder.com/600x400" alt="Project 6" class="w-full h-48 object-cover transition-transform duration-500 hover:scale-110">
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
+                            <p class="text-sm opacity-90 mb-4">A modern portfolio website with 3D effects and interactive elements.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs px-2 py-1 rounded-full bg-blue-500 bg-opacity-20">Three.js</span>
+                                <span class="text-xs px-2 py-1 rounded-full bg-purple-500 bg-opacity-20">GSAP</span>
+                                <span class="text-xs px-2 py-1 rounded-full bg-green-500 bg-opacity-20">TailwindCSS</span>
+                            </div>
+                        </div>
+                        <div class="project-card-back glass-card p-6 rounded-xl h-full flex flex-col justify-center items-center text-center absolute top-0 w-full">
+                            <h3 class="text-xl font-semibold mb-4">Project Details</h3>
+                            <p class="text-sm mb-4">Features particle animations, 3D models, and smooth transitions.</p>
+                            <div class="flex space-x-3">
+                                <a href="#" class="px-3 py-1 rounded-full btn-primary text-sm">Live Demo</a>
+                                <a href="#" class="px-3 py-1 rounded-full btn-secondary text-sm">Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://github.com/awaisshafi6164?tab=repositories" class="inline-flex items-center px-6 py-3 rounded-full btn-secondary font-medium">
+                    <i class="fas fa-eye mr-2"></i> View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 solid-text">Contact Me</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="glass-card p-8 rounded-xl" data-tilt>
+                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-full bg-purple-500 bg-opacity-20 mr-4">
+                                <i class="fas fa-envelope text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1">Email</h4>
+                                <p class="opacity-90">awaisshafi.pk@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-full bg-blue-500 bg-opacity-20 mr-4">
+                                <i class="fas fa-phone text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1">Phone</h4>
+                                <p class="opacity-90">+92-340-889-8238</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="p-3 rounded-full bg-green-500 bg-opacity-20 mr-4">
+                                <i class="fas fa-map-marker-alt text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium mb-1">Location</h4>
+                                <p class="opacity-90">Islamabad, Pakistan</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-medium mb-4">Connect with me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/awaisshafi6164" class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-purple-500 hover:bg-opacity-20 transition-all">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/muhammad-awais-shafi/" class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-blue-500 hover:bg-opacity-20 transition-all">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.instagram.com/__iawais/" class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-pink-500 hover:bg-opacity-20 transition-all">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-8 rounded-xl" data-tilt>
+                    <h3 class="text-2xl font-semibold mb-6">Send Me a Message</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block mb-2 font-medium">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded-lg glass-card border border-opacity-20 border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block mb-2 font-medium">Your Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded-lg glass-card border border-opacity-20 border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject" class="block mb-2 font-medium">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 rounded-lg glass-card border border-opacity-20 border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Enter subject">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block mb-2 font-medium">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg glass-card border border-opacity-20 border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Enter your message"></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 rounded-full btn-primary font-medium">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="glass-card py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-4">© 2025 M Awais Shafi. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://github.com/awaisshafi6164" class="text-gray-400 hover:text-white">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/muhammad-awais-shafi/" class="text-gray-400 hover:text-white">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/__iawais/" class="text-gray-400 hover:text-white">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
