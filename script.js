@@ -1,4 +1,3 @@
-
 // Mouse follower circle
 // const cursorFollower = document.querySelector('.cursor-follower');
 
@@ -105,3 +104,11 @@ if (mobileMenuButton) {
         mobileMenu.classList.toggle('hidden');
     });
 }
+
+// Close mobile menu when a link is clicked
+const mobileMenuLinks = document.querySelectorAll('.mobile-menu .nav-link');
+mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+});
