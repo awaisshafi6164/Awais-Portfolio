@@ -219,3 +219,26 @@ button:hover ~ .cursor-follower,
     cursor: pointer !important;
   }
 }
+
+/* Mailto form section styles */
+.mailto-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.mailto-form input,
+.mailto-form textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+.mailto-form button {
+  width: 100%;
+  max-width: 100%;
+}
