@@ -899,60 +899,29 @@
             </div>
           </div>
 
-          <div class="glass-card p-8 rounded-xl" data-tilt>
+          <div
+            class="glass-card p-8 rounded-xl flex flex-col items-center justify-center mailto-form"
+            data-tilt
+          >
             <h3 class="text-2xl font-semibold mb-6">Send Me a Message</h3>
-            <form>
-              <div class="mb-4">
-                <label for="name" class="block mb-2 font-medium"
-                  >Your Name</label
-                >
-                <input
-                  type="text"
-                  id="name"
-                  class="w-full px-4 py-2 rounded-lg glass-card border border-opacity-20 border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  placeholder="Enter your name"
-                />
-              </div>
-              <div class="mb-4">
-                <label for="email" class="block mb-2 font-medium"
-                  >Your Email</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  class="w-full px-4 py-2 rounded-lg glass-card border border-opacity-20 border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  placeholder="Enter your email"
-                />
-              </div>
-              <div class="mb-4">
-                <label for="subject" class="block mb-2 font-medium"
-                  >Subject</label
-                >
-                <input
-                  type="text"
-                  id="subject"
-                  class="w-full px-4 py-2 rounded-lg glass-card border border-opacity-20 border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  placeholder="Enter subject"
-                />
-              </div>
-              <div class="mb-4">
-                <label for="message" class="block mb-2 font-medium"
-                  >Message</label
-                >
-                <textarea
-                  id="message"
-                  rows="4"
-                  class="w-full px-4 py-2 rounded-lg glass-card border border-opacity-20 border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  placeholder="Enter your message"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                class="w-full px-6 py-3 rounded-full btn-primary font-medium"
-              >
-                Send Message
-              </button>
-            </form>
+            <input
+              type="text"
+              id="mailto-subject"
+              class="w-full max-w-md mb-4 px-4 py-2 rounded-lg glass-card border border-opacity-20 border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              placeholder="Subject"
+            />
+            <textarea
+              id="mailto-message"
+              rows="4"
+              class="w-full max-w-md mb-4 px-4 py-2 rounded-lg glass-card border border-opacity-20 border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              placeholder="Your message"
+            ></textarea>
+            <button
+              id="mailto-send-btn"
+              class="inline-flex items-center px-8 py-4 rounded-full btn-primary font-medium text-lg shadow-lg hover:bg-[#5a4bcf] transition-all"
+            >
+              <i class="fas fa-envelope mr-3"></i> Email Me Directly
+            </button>
           </div>
         </div>
       </div>

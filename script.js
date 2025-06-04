@@ -112,3 +112,18 @@ mobileMenuLinks.forEach(link => {
         mobileMenu.classList.add('hidden');
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const mailBtn = document.getElementById("mailto-send-btn");
+  if (mailBtn) {
+    mailBtn.addEventListener("click", function () {
+      const subject = encodeURIComponent(
+        document.getElementById("mailto-subject").value
+      );
+      const body = encodeURIComponent(
+        document.getElementById("mailto-message").value
+      );
+      window.location.href = `mailto:awaisshafi.pk@gmail.com?subject=${subject}&body=${body}`;
+    });
+  }
+});
