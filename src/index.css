@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brittany Chiang inspired color scheme */
+    --background: 222 47% 11%;
+    --foreground: 213 31% 91%;
+
+    --card: 222 47% 13%;
+    --card-foreground: 213 31% 91%;
+
+    --popover: 222 47% 13%;
+    --popover-foreground: 213 31% 91%;
+
+    --primary: 166 76% 68%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 222 47% 15%;
+    --secondary-foreground: 213 31% 91%;
+
+    --muted: 222 30% 20%;
+    --muted-foreground: 217 19% 62%;
+
+    --accent: 166 76% 68%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 30% 20%;
+    --input: 222 30% 20%;
+    --ring: 166 76% 68%;
+
+    --radius: 0.5rem;
+
+    /* Navy shades */
+    --navy-dark: 222 47% 8%;
+    --navy: 222 47% 11%;
+    --navy-light: 222 41% 15%;
+    --navy-lighter: 222 33% 22%;
+
+    /* Highlight color */
+    --highlight: 213 31% 91%;
+    --slate: 217 19% 62%;
+    --slate-light: 217 17% 72%;
+
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 213 31% 91%;
+    --sidebar-primary: 166 76% 68%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 222 47% 15%;
+    --sidebar-accent-foreground: 213 31% 91%;
+    --sidebar-border: 222 30% 20%;
+    --sidebar-ring: 166 76% 68%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    font-weight: 600;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.3);
+    color: hsl(var(--highlight));
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--navy));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--navy-lighter));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--slate));
+  }
+}
+
+@layer utilities {
+  .font-mono {
+    font-family: 'Fira Code', 'SF Mono', 'Fira Mono', monospace;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(166 76% 80%) 100%);
+  }
+
+  .highlight-link {
+    @apply text-primary hover:text-primary/80 transition-colors;
+  }
+
+  .section-heading {
+    @apply flex items-center gap-2 text-lg font-semibold text-highlight mb-10;
+  }
+
+  .section-heading::after {
+    content: '';
+    display: block;
+    width: 300px;
+    height: 1px;
+    background: hsl(var(--navy-lighter));
+  }
+
+  .numbered-heading {
+    @apply font-mono text-primary text-sm;
+  }
+
+  /* Hover card effect */
+  .project-card {
+    @apply relative rounded-md transition-all duration-300;
+  }
+
+  .project-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--navy-light) / 0.5) 0%,
+      transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: inherit;
+  }
+
+  .project-card:hover::before {
+    opacity: 1;
+  }
+
+  /* Focus visible */
+  .focus-visible-ring {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+}
+
+/* Highlight text color utility */
+@layer utilities {
+  .text-highlight {
+    color: hsl(var(--highlight));
+  }
+
+  .text-slate {
+    color: hsl(var(--slate));
+  }
+
+  .text-slate-light {
+    color: hsl(var(--slate-light));
+  }
+
+  .bg-navy {
+    background-color: hsl(var(--navy));
+  }
+
+  .bg-navy-dark {
+    background-color: hsl(var(--navy-dark));
+  }
+
+  .bg-navy-light {
+    background-color: hsl(var(--navy-light));
+  }
+
+  .bg-navy-lighter {
+    background-color: hsl(var(--navy-lighter));
+  }
+}
