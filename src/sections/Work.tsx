@@ -24,17 +24,17 @@ const featuredProjects = [
     title: 'Everyday Chronicles',
     description:
       'Created a personalized automated diary app that displays daily activities including location tracking, mood monitoring, call logs with locations, and mobile usage statistics. Provides weekly insights to help users understand their daily patterns.',
-    image: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&auto=format&fit=crop',
+    image: 'assets/projects/everyday-chronciles-ss.png',
     tech: ['Flutter', 'Dart', 'Firebase', 'External-APIs', 'AI', 'Python'],
     github: '#',
     external: '#',
   },
   {
-    title: 'Traders App',
+    title: 'ShopSync App',
     description:
-      'Developed an organization app for traders enabling comprehensive item management (add, update, delete), automated price change notifications to employees, and product catalog generation for easy sharing with customers.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop',
-    tech: ['Android Studio', 'Java', 'Firebase'],
+      'Developing a mobile application to off multiple alarms once by its categories. Features include setting multiple alarms, categorizing them, and a user-friendly interface for easy management.',
+    image: 'assets/projects/shopsync-ss.png',
+    tech: ['Flutter', 'Dart', 'Firebase', 'External-APIs'],
     github: '#',
     external: '#',
   },
