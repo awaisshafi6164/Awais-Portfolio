@@ -21,6 +21,15 @@ const featuredProjects = [
     external: 'https://awaisshafi6164.github.io/carer-pharma-website/',
   },
   {
+    title: 'PMS SAAS Application',
+    description:
+      'Deveoloped a web-based Property Management System (PMS) SAAS application to streamline property management tasks. Features include tenant management, rent tracking, maintenance scheduling, and financial reporting.',
+    image: 'assets/projects/PMS_SAAS_Application.png',
+    tech: ['React TS', 'Tailwind CSS', 'Supabase'],
+    github: '#',
+    external: 'https://awaisshafi6164.github.io/property-management-system/',
+  },
+  {
     title: 'Everyday Chronicles',
     description:
       'Created a personalized automated diary app that displays daily activities including location tracking, mood monitoring, call logs with locations, and mobile usage statistics. Provides weekly insights to help users understand their daily patterns.',
